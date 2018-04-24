@@ -1,7 +1,11 @@
 <mat-card>
   <mat-card-actions>
-    <button color="primary" (click)="generateSrc()" mat-button mat-raised-button>
-      Give me another cat
+      <button 
+      (click)="generateSrc()" 
+      [disabled]="isOffline()"
+      mat-button 
+      mat-raised-button>
+        {{ getButton.text }}
     </button>
   </mat-card-actions>
   <img 
